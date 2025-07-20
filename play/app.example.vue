@@ -1,41 +1,31 @@
-<template>
-  <!-- If you want to apply a custom namespace, uncomment the following and apply the css configuration in `vite.config.ts`. -->
-  <!-- <el-config-provider namespace="ep"> -->
-  <div class="play-container">
-    <el-icon color="#409EFC">
-      <el-icon-check />
-    </el-icon>
-    <el-icon>
-      <el-icon-menu />
-    </el-icon>
-    <el-button>test</el-button>
-    <div v-loading="true" />
-  </div>
-  <!-- </el-config-provider> -->
-</template>
-
 <script setup lang="ts">
-// code here
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
-<style lang="scss">
-html,
-body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
+<template>
+  <div>
+    <a href="https://vite.dev" target="_blank">
+      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
+  </div>
+  <HelloWorld msg="Vite + Vue" />
+</template>
 
-  #play {
-    height: 100%;
-    width: 100%;
-
-    .play-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
